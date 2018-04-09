@@ -134,10 +134,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bhd-Fu-pmh" customClass="HoshiTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="16" y="199" width="343" height="40"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Ck9-pf-NHd">
+                                <rect key="frame" x="137" y="91" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="6dH-cd-3AD"/>
+                                    <constraint firstAttribute="height" constant="100" id="ECH-cB-q8o"/>
+                                    <constraint firstAttribute="width" constant="100" id="a72-nb-AHo"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bhd-Fu-pmh" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="16" y="229" width="343" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="cVs-SL-N1E"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -152,9 +159,9 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5hV-bS-Ihr" customClass="HoshiTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="16" y="254" width="343" height="40"/>
+                                <rect key="frame" x="16" y="284" width="343" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="O86-gd-eAf"/>
+                                    <constraint firstAttribute="height" constant="40" id="g3t-XM-Tte"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -169,9 +176,9 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rMu-kq-cCP" customClass="HoshiTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="16" y="318" width="343" height="40"/>
+                                <rect key="frame" x="16" y="348" width="343" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="O9H-Mu-IEs"/>
+                                    <constraint firstAttribute="height" constant="40" id="4i6-am-xEY"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -186,43 +193,46 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G60-iI-TnQ">
-                                <rect key="frame" x="16" y="366" width="343" height="40"/>
+                                <rect key="frame" x="16" y="396" width="343" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Gp5-j9-y5K"/>
+                                    <constraint firstAttribute="height" constant="40" id="2Er-MN-USr"/>
                                 </constraints>
                                 <state key="normal" title="회원가입"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JzO-di-jA0">
-                                <rect key="frame" x="16" y="414" width="343" height="40"/>
+                                <rect key="frame" x="16" y="444" width="343" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="bCd-iN-dLp"/>
+                                    <constraint firstAttribute="height" constant="40" id="NtL-P2-AhT"/>
                                 </constraints>
                                 <state key="normal" title="취소"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="DqG-Wy-TIz" firstAttribute="trailing" secondItem="JzO-di-jA0" secondAttribute="trailing" constant="16" id="0OY-p7-Fts"/>
-                            <constraint firstItem="G60-iI-TnQ" firstAttribute="leading" secondItem="DqG-Wy-TIz" secondAttribute="leading" constant="16" id="2Oc-SV-5qA"/>
-                            <constraint firstItem="DqG-Wy-TIz" firstAttribute="trailing" secondItem="5hV-bS-Ihr" secondAttribute="trailing" constant="16" id="3V0-hK-X2A"/>
-                            <constraint firstItem="rMu-kq-cCP" firstAttribute="top" secondItem="5hV-bS-Ihr" secondAttribute="bottom" constant="24" id="3Ye-Ar-7Vc"/>
-                            <constraint firstItem="5hV-bS-Ihr" firstAttribute="leading" secondItem="DqG-Wy-TIz" secondAttribute="leading" constant="16" id="P0o-iQ-4oq"/>
-                            <constraint firstItem="DqG-Wy-TIz" firstAttribute="trailing" secondItem="G60-iI-TnQ" secondAttribute="trailing" constant="16" id="PhV-Vb-fQo"/>
-                            <constraint firstItem="rMu-kq-cCP" firstAttribute="leading" secondItem="DqG-Wy-TIz" secondAttribute="leading" constant="16" id="Prk-Ji-pP4"/>
-                            <constraint firstItem="DqG-Wy-TIz" firstAttribute="trailing" secondItem="bhd-Fu-pmh" secondAttribute="trailing" constant="16" id="Pzf-59-yIM"/>
-                            <constraint firstItem="JzO-di-jA0" firstAttribute="top" secondItem="G60-iI-TnQ" secondAttribute="bottom" constant="8" id="S18-cy-NVb"/>
-                            <constraint firstItem="5hV-bS-Ihr" firstAttribute="top" secondItem="bhd-Fu-pmh" secondAttribute="bottom" constant="15" id="gSH-kc-N9x"/>
-                            <constraint firstItem="G60-iI-TnQ" firstAttribute="top" secondItem="rMu-kq-cCP" secondAttribute="bottom" constant="8" id="ioZ-1g-7KA"/>
-                            <constraint firstItem="DqG-Wy-TIz" firstAttribute="trailing" secondItem="rMu-kq-cCP" secondAttribute="trailing" constant="16" id="nFP-n0-Gea"/>
-                            <constraint firstItem="bhd-Fu-pmh" firstAttribute="top" secondItem="DqG-Wy-TIz" secondAttribute="top" constant="179" id="oFz-sS-TcM"/>
-                            <constraint firstItem="JzO-di-jA0" firstAttribute="leading" secondItem="DqG-Wy-TIz" secondAttribute="leading" constant="16" id="rqo-i2-E8W"/>
-                            <constraint firstItem="bhd-Fu-pmh" firstAttribute="leading" secondItem="DqG-Wy-TIz" secondAttribute="leading" constant="16" id="zE3-9O-4C7"/>
+                            <constraint firstItem="5hV-bS-Ihr" firstAttribute="leading" secondItem="DqG-Wy-TIz" secondAttribute="leading" constant="16" id="5wN-kb-2vh"/>
+                            <constraint firstItem="G60-iI-TnQ" firstAttribute="leading" secondItem="DqG-Wy-TIz" secondAttribute="leading" constant="16" id="9Ru-Ao-PVI"/>
+                            <constraint firstItem="JzO-di-jA0" firstAttribute="leading" secondItem="DqG-Wy-TIz" secondAttribute="leading" constant="16" id="FQW-i4-SX1"/>
+                            <constraint firstItem="JzO-di-jA0" firstAttribute="top" secondItem="G60-iI-TnQ" secondAttribute="bottom" constant="8" id="GhH-Vd-ken"/>
+                            <constraint firstItem="Ck9-pf-NHd" firstAttribute="top" secondItem="DqG-Wy-TIz" secondAttribute="top" constant="71" id="Hlg-0R-dgU"/>
+                            <constraint firstItem="G60-iI-TnQ" firstAttribute="top" secondItem="rMu-kq-cCP" secondAttribute="bottom" constant="8" id="MXR-Em-MvV"/>
+                            <constraint firstItem="bhd-Fu-pmh" firstAttribute="leading" secondItem="DqG-Wy-TIz" secondAttribute="leading" constant="16" id="My1-ad-aOS"/>
+                            <constraint firstItem="bhd-Fu-pmh" firstAttribute="top" secondItem="Ck9-pf-NHd" secondAttribute="bottom" constant="38" id="QPt-9S-fdW"/>
+                            <constraint firstItem="5hV-bS-Ihr" firstAttribute="top" secondItem="bhd-Fu-pmh" secondAttribute="bottom" constant="15" id="eI1-Uw-8sX"/>
+                            <constraint firstItem="DqG-Wy-TIz" firstAttribute="trailing" secondItem="5hV-bS-Ihr" secondAttribute="trailing" constant="16" id="fCy-jF-vYF"/>
+                            <constraint firstItem="rMu-kq-cCP" firstAttribute="leading" secondItem="DqG-Wy-TIz" secondAttribute="leading" constant="16" id="iGg-Ew-DAs"/>
+                            <constraint firstItem="DqG-Wy-TIz" firstAttribute="trailing" secondItem="G60-iI-TnQ" secondAttribute="trailing" constant="16" id="nIh-Aj-vm2"/>
+                            <constraint firstItem="DqG-Wy-TIz" firstAttribute="trailing" secondItem="rMu-kq-cCP" secondAttribute="trailing" constant="16" id="p9T-w5-qOY"/>
+                            <constraint firstItem="DqG-Wy-TIz" firstAttribute="trailing" secondItem="bhd-Fu-pmh" secondAttribute="trailing" constant="16" id="tlM-EC-7sc"/>
+                            <constraint firstItem="rMu-kq-cCP" firstAttribute="top" secondItem="5hV-bS-Ihr" secondAttribute="bottom" constant="24" id="vlk-dl-t8O"/>
+                            <constraint firstItem="DqG-Wy-TIz" firstAttribute="trailing" secondItem="JzO-di-jA0" secondAttribute="trailing" constant="16" id="wgH-HC-3zn"/>
+                            <constraint firstItem="Ck9-pf-NHd" firstAttribute="centerX" secondItem="gBy-PD-GdO" secondAttribute="centerX" id="xK9-0I-nY3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DqG-Wy-TIz"/>
                     </view>
                     <connections>
                         <outlet property="cancelBtn" destination="JzO-di-jA0" id="C1J-8I-qYT"/>
                         <outlet property="emailTextField" destination="bhd-Fu-pmh" id="SPq-uW-Hh3"/>
+                        <outlet property="imgView" destination="Ck9-pf-NHd" id="jEX-DJ-cIt"/>
                         <outlet property="nameTextField" destination="rMu-kq-cCP" id="tMK-0g-oda"/>
                         <outlet property="passwordTextField" destination="5hV-bS-Ihr" id="wrI-MZ-Oet"/>
                         <outlet property="signUp" destination="G60-iI-TnQ" id="ibx-Af-Daw"/>
