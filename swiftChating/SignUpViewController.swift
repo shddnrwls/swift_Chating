@@ -31,7 +31,7 @@ class SignUpViewController: UIViewController,UINavigationControllerDelegate,UIIm
             let image = UIImageJPEGRepresentation(self.imgView.image!, 0.1)
             Storage.storage().reference().child("userImages").child(uid!).putData(image!, metadata: nil, completion:{ (data,error) in
                 let imageUrl = data?.downloadURL()?.absoluteString
-                 Database.database().reference().child("users").child(uid!).setValue(["name": self.nameTextField.text!,"porfileImageUrl":imageUrl])
+                 Database.database().reference().child("users").child(uid!).setValue(["name": self.nameTextField.text!,"profileImageUrl":imageUrl])
             })
             
         }

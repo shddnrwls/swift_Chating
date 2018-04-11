@@ -23,6 +23,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="844" y="828"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="Xhy-5f-2Ac">
@@ -62,7 +63,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
                                         <color key="value" red="1" green="0.1149698014" blue="0.12583154760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -118,13 +119,63 @@
                         <viewLayoutGuide key="safeArea" id="KDU-EY-pau"/>
                     </view>
                     <connections>
+                        <outlet property="emailTextfield" destination="BHk-Sb-QfK" id="Cuw-4b-3z7"/>
                         <outlet property="loginBtn" destination="Wae-ZU-fNd" id="dn2-Tx-NTT"/>
+                        <outlet property="password" destination="nzL-sV-9OV" id="x3e-0m-2c7"/>
                         <outlet property="siginInBtn" destination="G9l-kD-MEq" id="Nd4-Ti-lLd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WDj-QG-Azi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="793" y="45"/>
+        </scene>
+        <!--People View Controller-->
+        <scene sceneID="6YH-ED-E89">
+            <objects>
+                <viewController id="Dkx-FV-9rO" customClass="PeopleViewController" customModule="swiftChating" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iod-cm-beS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="kXE-Ql-CwS"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="sS3-KM-Vh1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MBf-fi-Sgb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2577" y="199"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5XF-Os-iXo">
+            <objects>
+                <viewController id="pMi-6K-fgl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jcN-qg-ueu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="2Vb-BM-NBg"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="FS8-Lb-pVP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AXE-qK-k8y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2916" y="842"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7ri-1T-wuT">
+            <objects>
+                <viewController id="QVu-qH-y2p" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j2Z-n6-NOd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="0bh-Tz-3hE"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="LHA-bk-vXP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pfR-De-3lu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1713" y="1197"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="Pr7-qr-n6h">
@@ -165,7 +216,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
                                         <color key="value" red="1" green="0.1149698014" blue="0.12583154760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -240,7 +291,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mqy-QA-r75" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="792.79999999999995" y="752.47376311844084"/>
+            <point key="canvasLocation" x="-46" y="399"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="nbM-dc-q5L">
+            <objects>
+                <tabBarController storyboardIdentifier="MainViewTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="ISJ-m1-b8L" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Y22-pS-19I">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Dkx-FV-9rO" kind="relationship" relationship="viewControllers" id="AOo-mV-jJp"/>
+                        <segue destination="pMi-6K-fgl" kind="relationship" relationship="viewControllers" id="dZe-VA-iks"/>
+                        <segue destination="QVu-qH-y2p" kind="relationship" relationship="viewControllers" id="pZz-oG-90t"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4G5-Ee-THL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1535" y="399"/>
         </scene>
     </scenes>
     <resources>
