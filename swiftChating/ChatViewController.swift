@@ -7,11 +7,24 @@
 //
 
 import UIKit
+import Firebase
 
 class ChatViewController: UIViewController {
+    
+    
+    
+
+    @IBOutlet var messageTextfield: UITextField!
+    @IBOutlet var sendBtn: UIButton!
+    var uid : String?
+    var chatRoomUid : String?
     public var destinationUid :String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        uid = Auth.auth().currentUser?.uid
+        sendBtn.addTarget(self, action: #selector(createRoom), for: .touchUpInside)
+        checkChatRoom()
 
         // Do any additional setup after loading the view.
     }
@@ -20,16 +33,33 @@ class ChatViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @objc func createRoom(){
+        let createRoomInfo : Dictionary<String,Any> =  [ "users" : [
+                uid!:true,
+                destinationUid!:true
+            ]
+        ]
+        if (chatRoomUid == nil){
+            Database.database().reference().child("chatroom").childByAutoId().setValue(createRoomInfo)
+        }
+        else{
+            let value : Dictionary<String,Any> = [
+                "comments":[
+                    "uid": uid!,
+                    "message":messageTextfield.text!
+                ]
+            ]
+            Database.database().reference().child("chatroom").child(chatRoomUid!).child("comments").childByAutoId().setValue(value)
+        }
+        
+        
     }
-    */
-
+    @objc func checkChatRoom(){
+        Database.database().reference().child("chatroom").queryOrdered(byChild: "users/"+uid!).queryEqual(toValue: true).observeSingleEvent(of: DataEventType.value) { (datasnapshot) in
+            for item in datasnapshot.children.allObjects as! [DataSnapshot]{
+                self.chatRoomUid = item.key
+                
+            }
+        }
+    }
 }

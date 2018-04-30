@@ -134,22 +134,52 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MBf-fi-Sgb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3712.8000000000002" y="-180.35982008995504"/>
+            <point key="canvasLocation" x="3572" y="-180"/>
         </scene>
-        <!--View Controller-->
+        <!--Chat View Controller-->
         <scene sceneID="9Wc-S0-LaF">
             <objects>
-                <viewController storyboardIdentifier="ChatViewController" id="Lno-pf-IQd" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatViewController" id="Lno-pf-IQd" customClass="ChatViewController" customModule="swiftChating" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ejf-vo-t6P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s4D-Di-kvs">
+                                <rect key="frame" x="313" y="617" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="FZR-rY-PXL"/>
+                                    <constraint firstAttribute="height" constant="30" id="b3b-Tm-hqu"/>
+                                </constraints>
+                                <state key="normal" title="전송"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x4K-fG-g8m">
+                                <rect key="frame" x="16" y="617" width="289" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Lgu-Tk-Jhg"/>
+                                    <constraint firstAttribute="width" constant="289" id="qCH-6a-aal"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oka-G7-trx" firstAttribute="trailing" secondItem="s4D-Di-kvs" secondAttribute="trailing" constant="16" id="1EV-Ni-EB2"/>
+                            <constraint firstItem="x4K-fG-g8m" firstAttribute="leading" secondItem="oka-G7-trx" secondAttribute="leading" constant="16" id="E2A-bh-SRw"/>
+                            <constraint firstItem="oka-G7-trx" firstAttribute="bottom" secondItem="s4D-Di-kvs" secondAttribute="bottom" constant="20" id="HK2-t3-4Ua"/>
+                            <constraint firstItem="oka-G7-trx" firstAttribute="bottom" secondItem="x4K-fG-g8m" secondAttribute="bottom" constant="20" id="SdI-Dw-ujm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="oka-G7-trx"/>
                     </view>
+                    <connections>
+                        <outlet property="messageTextfield" destination="x4K-fG-g8m" id="GV2-bn-jJH"/>
+                        <outlet property="sendBtn" destination="s4D-Di-kvs" id="5IT-3d-ghb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RmP-Go-Hp8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4458" y="-180"/>
+            <point key="canvasLocation" x="4456.8000000000002" y="-180.35982008995504"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="5XF-Os-iXo">

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0409C9FF2096EDE900ECB87C /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409C9FE2096EDE900ECB87C /* ChatViewController.swift */; };
+		0409CA012096EEE400ECB87C /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409CA002096EEE400ECB87C /* ChatModel.swift */; };
 		048C2D39207231F4004514CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C2D38207231F4004514CA /* AppDelegate.swift */; };
 		048C2D3B207231F4004514CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C2D3A207231F4004514CA /* ViewController.swift */; };
 		048C2D3E207231F4004514CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048C2D3C207231F4004514CA /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		0409C9FE2096EDE900ECB87C /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		0409CA002096EEE400ECB87C /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		048C2D35207231F4004514CA /* swiftChating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftChating.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		048C2D38207231F4004514CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		048C2D3A207231F4004514CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0409CA022096EEE800ECB87C /* model */ = {
+			isa = PBXGroup;
+			children = (
+				04F21FD6207B4D2A002C77F2 /* UserModel.swift */,
+				0409CA002096EEE400ECB87C /* ChatModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		048C2D2C207231F3004514CA = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +88,7 @@
 		048C2D37207231F4004514CA /* swiftChating */ = {
 			isa = PBXGroup;
 			children = (
+				0409CA022096EEE800ECB87C /* model */,
 				048C2D38207231F4004514CA /* AppDelegate.swift */,
 				048C2D3A207231F4004514CA /* ViewController.swift */,
 				04FD86802078ED0200002CF8 /* GoogleService-Info.plist */,
@@ -89,7 +101,6 @@
 				048C2D41207231F4004514CA /* LaunchScreen.storyboard */,
 				048C2D44207231F4004514CA /* Info.plist */,
 				04F0CA7D207B0ABA0073A914 /* MainViewController.swift */,
-				04F21FD6207B4D2A002C77F2 /* UserModel.swift */,
 				04F21FD8207B4DA2002C77F2 /* PeopleViewController.swift */,
 			);
 			path = swiftChating;
@@ -263,6 +274,7 @@
 				048C2D39207231F4004514CA /* AppDelegate.swift in Sources */,
 				04F21FD7207B4D2A002C77F2 /* UserModel.swift in Sources */,
 				04F0CA7E207B0ABA0073A914 /* MainViewController.swift in Sources */,
+				0409CA012096EEE400ECB87C /* ChatModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
