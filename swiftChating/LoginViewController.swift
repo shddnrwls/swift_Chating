@@ -8,7 +8,7 @@
 
 import UIKit
 import Firebase
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController ,UITextFieldDelegate{
 
     @IBOutlet var siginInBtn: UIButton!
     @IBOutlet var loginBtn: UIButton!
@@ -55,6 +55,22 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if(textField.isEqual(emailTextfield))
+        { password.becomeFirstResponder()
+            
+        } else if(textField.isEqual(password)) {
+            password.resignFirstResponder()
+            
+        }
+        return true
+        
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
+    
     
 
     /*

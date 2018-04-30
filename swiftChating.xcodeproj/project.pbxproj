@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0409C9FF2096EDE900ECB87C /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409C9FE2096EDE900ECB87C /* ChatViewController.swift */; };
 		048C2D39207231F4004514CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C2D38207231F4004514CA /* AppDelegate.swift */; };
 		048C2D3B207231F4004514CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C2D3A207231F4004514CA /* ViewController.swift */; };
 		048C2D3E207231F4004514CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048C2D3C207231F4004514CA /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0409C9FE2096EDE900ECB87C /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		048C2D35207231F4004514CA /* swiftChating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftChating.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		048C2D38207231F4004514CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		048C2D3A207231F4004514CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				04FD86802078ED0200002CF8 /* GoogleService-Info.plist */,
 				04FD867E2078E7EF00002CF8 /* RemoteConfigDefaults.plist */,
 				048C2D3C207231F4004514CA /* Main.storyboard */,
+				0409C9FE2096EDE900ECB87C /* ChatViewController.swift */,
 				04FD8684207AF09800002CF8 /* SignUpViewController.swift */,
 				04FD8682207AEC0000002CF8 /* LoginViewController.swift */,
 				048C2D3F207231F4004514CA /* Assets.xcassets */,
@@ -254,6 +257,7 @@
 			files = (
 				04FD8683207AEC0000002CF8 /* LoginViewController.swift in Sources */,
 				04F21FD9207B4DA2002C77F2 /* PeopleViewController.swift in Sources */,
+				0409C9FF2096EDE900ECB87C /* ChatViewController.swift in Sources */,
 				048C2D3B207231F4004514CA /* ViewController.swift in Sources */,
 				04FD8685207AF09800002CF8 /* SignUpViewController.swift in Sources */,
 				048C2D39207231F4004514CA /* AppDelegate.swift in Sources */,
