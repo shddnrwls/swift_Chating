@@ -30,11 +30,16 @@ class PeopleViewController: UIViewController,UITableViewDelegate,UITableViewData
         
         Database.database().reference().child("users").observe(DataEventType.value, with: { (snapshot) in
             self.array.removeAll()
+            let myUid = Auth.auth().currentUser?.uid
+            
+            
             for child in snapshot.children{
                 let fchild = child as! DataSnapshot
                 let userModel = UserModel()
-                print(fchild)
                 userModel.setValuesForKeys(fchild.value as! [String : Any])
+                if(userModel.uid == myUid){
+                    continue
+                }
                 self.array.append(userModel)
             }
             
