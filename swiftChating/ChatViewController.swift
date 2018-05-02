@@ -10,6 +10,8 @@ import UIKit
 import Firebase
 
 class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    @IBOutlet var bottomContraint: NSLayoutConstraint!
+    
     @IBOutlet var tableView: UITableView!
     @IBOutlet var messageTextfield: UITextField!
     @IBOutlet var sendBtn: UIButton!
@@ -25,9 +27,38 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         uid = Auth.auth().currentUser?.uid
         sendBtn.addTarget(self, action: #selector(createRoom), for: .touchUpInside)
         checkChatRoom()
-
+        self.tabBarController?.tabBar.isHidden = true
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        <#code#>
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
+    }
+    
+    func keyboardWillshow(notification: Notification){
+        if let keyboardSize = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue{
+            self.bottomContraint.constant = keyboardSize.height
+        }
+        UIView.animate(withDuration: 0, animations: {
+            self.view.layoutIfNeeded()
+        }, completion: {
+            (complete) in
+            
+        })
+    }
+    func keyboardWillHide(notification: Notification){
+        self.bottomContraint.constant = 20
+        self.view.layoutIfNeeded()
+    }
+    
+    
+    
+    
+    
+    
     @objc func createRoom(){
         let createRoomInfo : Dictionary<String,Any> =  [ "users" : [
                 uid!:true,

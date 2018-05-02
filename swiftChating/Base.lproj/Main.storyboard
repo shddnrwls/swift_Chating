@@ -265,12 +265,13 @@
                             <constraint firstItem="s4D-Di-kvs" firstAttribute="top" secondItem="pYN-cs-Ng2" secondAttribute="bottom" constant="8" id="ES2-tf-QdQ"/>
                             <constraint firstItem="oka-G7-trx" firstAttribute="bottom" secondItem="s4D-Di-kvs" secondAttribute="bottom" constant="20" id="HK2-t3-4Ua"/>
                             <constraint firstItem="pYN-cs-Ng2" firstAttribute="leading" secondItem="oka-G7-trx" secondAttribute="leading" id="Mj9-VS-eDs"/>
-                            <constraint firstItem="oka-G7-trx" firstAttribute="bottom" secondItem="x4K-fG-g8m" secondAttribute="bottom" constant="20" id="SdI-Dw-ujm"/>
+                            <constraint firstItem="x4K-fG-g8m" firstAttribute="centerY" secondItem="s4D-Di-kvs" secondAttribute="centerY" id="OEV-e5-HrQ"/>
                             <constraint firstItem="pYN-cs-Ng2" firstAttribute="top" secondItem="ejf-vo-t6P" secondAttribute="top" id="xdJ-t3-xmG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oka-G7-trx"/>
                     </view>
                     <connections>
+                        <outlet property="bottomContraint" destination="HK2-t3-4Ua" id="Ain-So-Oo0"/>
                         <outlet property="messageTextfield" destination="x4K-fG-g8m" id="GV2-bn-jJH"/>
                         <outlet property="sendBtn" destination="s4D-Di-kvs" id="5IT-3d-ghb"/>
                         <outlet property="tableView" destination="pYN-cs-Ng2" id="oPx-xl-B7c"/>
@@ -470,7 +471,7 @@
     </scenes>
     <resources>
         <image name="logo" width="225" height="225"/>
-        <image name="message_blue" width="33" height="26"/>
-        <image name="message_gray" width="33" height="26"/>
+        <image name="message_blue" width="11" height="9"/>
+        <image name="message_gray" width="12" height="8"/>
     </resources>
 </document>
