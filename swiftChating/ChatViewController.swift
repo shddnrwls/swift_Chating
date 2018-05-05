@@ -28,32 +28,50 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         sendBtn.addTarget(self, action: #selector(createRoom), for: .touchUpInside)
         checkChatRoom()
         self.tabBarController?.tabBar.isHidden = true
+        
+        let tap :UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        <#code#>
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillshow(notification:)), name: .UIKeyboardWillShow, object: nil)
+         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: .UIKeyboardWillHide, object: nil)
     }
     override func viewWillDisappear(_ animated: Bool) {
+        NotificationCenter.default.removeObserver(self)
         self.tabBarController?.tabBar.isHidden = false
     }
     
-    func keyboardWillshow(notification: Notification){
+    @objc func keyboardWillshow(notification: Notification){
+        
         if let keyboardSize = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue{
+            
             self.bottomContraint.constant = keyboardSize.height
         }
+        
         UIView.animate(withDuration: 0, animations: {
             self.view.layoutIfNeeded()
         }, completion: {
             (complete) in
             
+            if self.comments.count > 0{
+                self.tableView.scrollToRow(at: IndexPath(item:self.comments.count - 1,section:0), at: UITableViewScrollPosition.bottom, animated: true)
+                
+            }
+            
+            
         })
+        
     }
-    func keyboardWillHide(notification: Notification){
+    @objc func keyboardWillHide(notification: Notification){
         self.bottomContraint.constant = 20
         self.view.layoutIfNeeded()
     }
     
+    @objc func dismissKeyboard(){
+        self.view.endEditing(true)
+    }
     
     
     
@@ -82,7 +100,9 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                     "message":messageTextfield.text!
                 
             ]
-            Database.database().reference().child("chatroom").child(chatRoomUid!).child("comments").childByAutoId().setValue(value)
+            Database.database().reference().child("chatroom").child(chatRoomUid!).child("comments").childByAutoId().setValue(value) { (err, ref) in
+                self.messageTextfield.text = ""
+            }
         }
         
         
@@ -119,6 +139,10 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                 self.comments.append(comment!)
             }
             self.tableView.reloadData()
+            if self.comments.count > 0{
+                self.tableView.scrollToRow(at: IndexPath(item:self.comments.count - 1,section:0), at: UITableViewScrollPosition.bottom, animated: true)
+                
+            }
             
         }
     }
